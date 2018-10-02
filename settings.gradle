@@ -1,1 +1,1 @@
-include ':1_helloworld'
+include ':1_helloworld', ':2_ndk_external'
