@@ -25,7 +25,7 @@ typedef const struct JNIInvokeInterface* JavaVM;
 
 JNIEXPORT jstring JNICALL
 Java_com_example_a2_1opencv_1gray_MainActivity_getHello(JNIEnv *env, jobject instance) {
-    return env->NewStringUTF((char *) "Hello JNI !");
+    return env->NewStringUTF((char *) " Hello extern c !");
 }
 
 #ifdef __cplusplus
