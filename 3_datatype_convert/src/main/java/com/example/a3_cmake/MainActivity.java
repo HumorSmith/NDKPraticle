@@ -15,18 +15,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView contentTv = findViewById(R.id.tv_content);
         contentTv.setText("int = " + convertInt(10) + "\t long = " + convertLong(11L) + "  string = " + convertString("hello world"));
-
     }
     static {
         //加载静态库
         System.loadLibrary("native-lib");
     }
-
     public native int convertInt(int src);
-
     public native long convertLong(long src);
-
     public native String convertString(String srcString);
-
 
 }

@@ -16,10 +16,6 @@ public:
     jint convertInt(JNIEnv *env, int srcInt);
     jlong convertLong(JNIEnv *env, long srcLong);
     jstring convertString(JNIEnv *env, const char* srcString);
-
-
-
-
 };
 
 //防止重复编译的头结束标识
