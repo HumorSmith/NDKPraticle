@@ -5,12 +5,14 @@
 #include "BitmapUtil.h"
 
 int BitmapUtil::gray(JNIEnv *env, jobject bitmap) {
-    AndroidBitmapInfo srcInfo, dstInfo;
+    AndroidBitmapInfo srcInfo;
+    //获取bitmap属性信息
     if (ANDROID_BITMAP_RESULT_SUCCESS != AndroidBitmap_getInfo(env, bitmap, &srcInfo)) {
         return false;
     }
 
     void *srcBuf;
+    //获取bitmap的像素信息,并锁住当前的像素点
     if (ANDROID_BITMAP_RESULT_SUCCESS != AndroidBitmap_lockPixels(env, bitmap, &srcBuf)) {
         return false;
     }
@@ -32,6 +34,7 @@ int BitmapUtil::gray(JNIEnv *env, jobject bitmap) {
             srcPixs[w * i + j] = color;
         }
     }
+    //修改完，解锁操作
     AndroidBitmap_unlockPixels(env, bitmap);
     return true;
 };
