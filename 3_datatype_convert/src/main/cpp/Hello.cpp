@@ -42,4 +42,4 @@ Java_com_example_a3_1cmake_MainActivity_convertString(JNIEnv *env, jobject insta
 #ifdef __cplusplus
 }
 #endif
-extern "C"
+

@@ -1,12 +1,11 @@
-package com.example.a4_datatype_bitmap;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.a5_opencv;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         System.loadLibrary("call_so_lib");
 
     }
-
 
     public native int gray(Bitmap bitmap);
 }
