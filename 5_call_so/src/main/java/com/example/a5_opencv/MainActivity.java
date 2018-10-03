@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     static {
         //加载静态库
         System.loadLibrary("native-lib");
-        System.loadLibrary("call_so_lib");
+        System.loadLibrary("call-lib");
 
     }
 
