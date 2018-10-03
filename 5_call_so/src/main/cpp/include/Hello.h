@@ -11,6 +11,4 @@
 extern "C"
 JNIEXPORT jint JNICALL
 Java_com_example_a5_1opencv_MainActivity_gray(JNIEnv *env, jobject instance, jobject bitmap);
-
-
 #endif //PRACTICLE_HELLO_H

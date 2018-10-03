@@ -20,10 +20,8 @@ public class MainActivity extends AppCompatActivity {
             dstIv.setImageBitmap(bitmap);
         }
     }
-
     static {
         System.loadLibrary("call-lib");
     }
-
     public native int gray(Bitmap bitmap);
 }

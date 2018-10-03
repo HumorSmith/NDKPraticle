@@ -13,6 +13,7 @@ extern "C" {
 
 JNIEXPORT jint JNICALL
 Java_com_example_a5_1opencv_MainActivity_gray(JNIEnv *env, jobject instance, jobject bitmap) {
+//   BitmapUtil的实现在so库里面
     BitmapUtil *bitmapUtil = new BitmapUtil;
     bitmapUtil->gray(env, bitmap);
     delete bitmapUtil;
