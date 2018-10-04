@@ -1,1 +1,1 @@
-include ':1_helloworld', ':2_ndk_external', ':3_datatype_convert', ':4_datatype_bitmap', ':5_call_so'
+include ':1_helloworld', ':2_ndk_external', ':3_datatype_convert', ':4_datatype_bitmap', ':5_call_so', ':6_opencv2'
