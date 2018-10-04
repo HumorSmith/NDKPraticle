@@ -14,5 +14,4 @@ using namespace cv;
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_example_a6_1opencv2_MainActivity_getVersion(JNIEnv *env, jobject instance);
-
 #endif //PRACTICLE_HELLO_H

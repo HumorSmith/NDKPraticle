@@ -14,10 +14,8 @@ public class MainActivity extends AppCompatActivity {
         TextView contentTv = findViewById(R.id.tv_content);
         contentTv.setText(getVersion());
     }
-
     static {
         System.loadLibrary("native-lib");
     }
-
     public native String getVersion();
 }
