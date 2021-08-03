@@ -24,6 +24,10 @@ jint add(JNIEnv *env, jobject clazz, jint a, jint b) {
     return a + b;
 }
 
+jint sub(JNIEnv *env, jobject clazz, jint a, jint b) {
+    return a - b;
+}
+
 //回调函数 在这里面注册函数
 jint  JNI_OnLoad(JavaVM* vm, void* reserved){
     JNIEnv* env = NULL;
@@ -44,15 +48,16 @@ jint  JNI_OnLoad(JavaVM* vm, void* reserved){
      *
      */
     JNINativeMethod methods_MainActivity[] = {
-            {"add", "(II)I", (jint *) add}
+            {"add", "(II)I", (jint *) add},
+            {"sub", "(II)I", (jint *) sub}
+
     };
 
     env->RegisterNatives(mainActivity,methods_MainActivity,sizeof(methods_MainActivity)/ sizeof(methods_MainActivity[0]));
-
+    env->RegisterNatives(mainActivity,methods_MainActivity,sizeof(methods_MainActivity)/ sizeof(methods_MainActivity[1]));
     //返回jni 的版本
     return JNI_VERSION_1_6;
 }
-
 
 
 #ifdef __cplusplus
